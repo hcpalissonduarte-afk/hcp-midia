@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HCP · Piloto de inteligência comercial B2B</title>
+<meta name="description" content="O HCP monta listas de empresas pelo seu cliente ideal e transforma as escolhidas em oportunidades no seu funil. Piloto assistido sem cobrança.">
+<meta property="og:title" content="HCP · Do critério ao funil, num lugar só">
+<meta property="og:description" content="Listas de empresas pelo seu cliente ideal, direto pro seu CRM. Piloto assistido sem cobrança.">
+<meta property="og:image" content="https://hcpalissonduarte-afk.github.io/hcp-midia/img/og.jpg">
+<meta name="theme-color" content="#08080a">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08080a;--bg2:#0f0f12;--card:#141417;--line:#26262b;--line2:#34343a;--tx:#ededf0;--tx2:#a8a8ae;--tx3:#6f6f76;--sil:linear-gradient(170deg,#ffffff,#cfcfd4 55%,#9a9aa0)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.kick{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--tx3)}
+h1,h2,h3{font-weight:900;letter-spacing:-.035em;line-height:1.02}
+h1{font-size:clamp(42px,9vw,84px)}
+h2{font-size:clamp(32px,6vw,56px)}
+h3{font-size:22px;letter-spacing:-.02em}
+.inv{display:inline-block;background:var(--sil);color:#08080a;padding:0 .18em;border-radius:8px;transform:rotate(-1.2deg)}
+.muted{color:var(--tx2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 26px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.btn:active{transform:scale(.98)}
+.bp{background:var(--sil);color:#08080a;box-shadow:0 10px 40px rgba(255,255,255,.12)}
+.bp:hover{box-shadow:0 14px 50px rgba(255,255,255,.2)}
+.bs{border:1.5px solid var(--line2);color:var(--tx)}
+.bs:hover{border-color:#6f6f76}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(8,8,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.2em;font-size:15px}
+.brand img{height:30px}
+nav .btn{height:42px;padding:0 18px;font-size:15px}
+/* hero */
+.hero{position:relative;padding:64px 0 40px;overflow:hidden}
+.hero:before{content:"";position:absolute;width:900px;height:900px;left:50%;top:-320px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(200,200,210,.13),transparent);pointer-events:none}
+.hero .logo{width:120px;margin:0 auto 26px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.8))}
+.hero{text-align:center}
+.hero p.lead{font-size:clamp(18px,2.6vw,21px);color:var(--tx2);max-width:640px;margin:22px auto 0}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.chip{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:999px;border:1px solid var(--line2);color:var(--tx2)}
+.chip.s{background:var(--sil);color:#08080a;border-color:transparent}
+.heroshot{margin:48px auto 0;max-width:920px;border-radius:20px;border:1px solid var(--line2);overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.9)}
+.bar{height:38px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#151518;border-bottom:1px solid var(--line)}
+.bar i{width:10px;height:10px;border-radius:50%;background:#3a3a40}
+.bar span{margin-left:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--tx3)}
+.bar b{margin-left:auto;font-family:'JetBrains Mono',monospace;font-weight:400;font-size:10px;letter-spacing:.16em;color:var(--tx2);border:1px solid var(--line2);border-radius:5px;padding:3px 7px}
+section{padding:72px 0}
+.sec-h{max-width:720px;margin-bottom:40px}
+.sec-h p{margin-top:16px;color:var(--tx2);font-size:18px}
+/* stats */
+.stats{display:grid;grid-template-columns:1fr;gap:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+.stat .n{font-size:clamp(64px,12vw,96px);font-weight:900;letter-spacing:-.06em;line-height:.9;background:var(--sil);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat p{margin-top:12px;font-size:19px;font-weight:600}
+.stat small{display:block;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--tx3);text-transform:uppercase}
+/* steps */
+.steps{display:grid;gap:22px}
+.step{display:grid;grid-template-columns:1fr;gap:20px;background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:22px;align-items:center}
+.step .num{width:44px;height:44px;border-radius:50%;background:var(--sil);color:#08080a;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px}
+.step p{color:var(--tx2);margin-top:10px}
+.shot{border-radius:14px;border:1px solid var(--line2);overflow:hidden;background:#0b0b0d}
+.note{margin-top:18px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase}
+/* now / building */
+.split{display:grid;gap:16px}
+.col{border-radius:22px;padding:26px;border:1px solid var(--line)}
+.col.now{background:var(--card)}
+.col.wip{background:transparent;border-style:dashed}
+.col ul{list-style:none;margin-top:18px}
+.col li{padding:12px 0;border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;font-weight:600}
+.col li:first-child{border-top:0}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.now .dot{background:#e9e9ed;box-shadow:0 0 12px rgba(255,255,255,.5)}
+.wip .dot{border:1.5px solid #6f6f76}
+.wip li{color:var(--tx2)}
+/* pilot */
+.pilot{background:var(--card);border:1px solid var(--line2);border-radius:28px;padding:34px 24px;text-align:center;position:relative;overflow:hidden}
+.pilot:before{content:"";position:absolute;inset:-40%;background:radial-gradient(closest-side,rgba(220,220,230,.09),transparent);pointer-events:none}
+.perks{display:grid;gap:12px;margin:30px auto 0;max-width:760px;text-align:left}
+.perk{display:flex;gap:16px;padding:18px;border-radius:16px;background:#0c0c0e;border:1px solid var(--line)}
+.perk b{flex:none;width:34px;height:34px;border-radius:10px;background:#1d1d21;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:14px}
+.perk p{color:var(--tx2);font-size:15px;margin-top:2px}
+/* faq */
+details{border-top:1px solid var(--line);padding:20px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font-weight:800;font-size:19px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-weight:400;color:var(--tx3);font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--tx2);margin-top:12px;max-width:760px}
+/* final */
+.final{text-align:center;padding:90px 0 70px}
+footer{border-top:1px solid var(--line);padding:30px 0 100px;color:var(--tx3);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+.float{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;display:flex;justify-content:center;pointer-events:none;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s}
+.float.on{opacity:1;transform:none}
+.float .btn{pointer-events:auto;width:100%;max-width:420px;box-shadow:0 18px 50px rgba(0,0,0,.7)}
+@media(min-width:760px){
+  .stats{grid-template-columns:1fr 1fr}
+  .step{grid-template-columns:1fr 1.25fr;padding:30px;gap:34px}
+  .step:nth-child(even) .txt{order:2}
+  .split{grid-template-columns:1fr 1fr}
+  .perks{grid-template-columns:1fr 1fr}
+  .pilot{padding:56px 48px}
+  .float{display:none}
+  footer{padding-bottom:30px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .rv.in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#topo"><img src="img/h.png" alt="">HCP</a>
+  <a class="btn bp wa" href="#" data-msg="Olá! Vi o HCP no Instagram e quero saber mais sobre o piloto.">Quero o piloto</a>
+</div></nav>
+
+<header class="hero" id="topo"><div class="wrap">
+  <img class="logo" src="img/h.png" alt="HCP">
+  <div class="kick">Inteligência comercial B2B</div>
+  <h1 style="margin-top:16px">Do critério ao funil.<br><span class="inv">Num lugar só.</span></h1>
+  <p class="lead">O HCP monta listas de empresas a partir do seu cliente ideal e transforma as escolhidas em oportunidades no seu CRM, com valor e próximo passo.</p>
+  <div class="cta">
+    <a class="btn bp wa" href="#" data-msg="Olá! Vi o HCP no Instagram e quero participar do piloto.">Quero participar do piloto</a>
+    <a class="btn bs" href="#como">Ver como funciona</a>
+  </div>
+  <div class="chips"><span class="chip s">Piloto sem cobrança</span><span class="chip">Acompanhamento direto</span><span class="chip">Você influencia o produto</span></div>
+  <div class="heroshot rv">
+    <div class="bar"><i></i><i></i><i></i><span>hcp · resultados</span><b>DEMONSTRAÇÃO</b></div>
+    <img src="img/tela-lista.jpg" alt="Tela de resultados do HCP com lista de empresas" width="1200" height="791">
+  </div>
+  <div class="note">Tela real do protótipo · dados de demonstração</div>
+</div></header>
+
+<section id="problema"><div class="wrap">
+  <div class="sec-h rv">
+    <div class="kick">O problema</div>
+    <h2 style="margin-top:14px">O vendedor não perde tempo vendendo. <span class="inv">Perde entre ferramentas.</span></h2>
+    <p>Base de dados de um lado, planilha no meio, CRM do outro e o WhatsApp pra lembrar. Cada passagem é um lugar onde o lead esfria, duplica ou some.</p>
+  </div>
+  <div class="stats">
+    <div class="stat rv"><div class="n">72%</div><p>do tempo do vendedor vai pra atividades que não são vender.</p><small>Fonte: Salesforce · Trends in Sales Operations</small></div>
+    <div class="stat rv"><div class="n">47%</div><p>dos profissionais de vendas levam mais de 24h pra atualizar o CRM ou fazer o follow-up.</p><small>Fonte: Pipedrive · pesquisa com 1.000 profissionais, 2026</small></div>
+  </div>
+</div></section>
+
+<section id="como" style="background:linear-gradient(180deg,transparent,#0c0c0e 30%,#0c0c0e 70%,transparent)"><div class="wrap">
+  <div class="sec-h rv">
+    <div class="kick">Como funciona</div>
+    <h2 style="margin-top:14px">Quatro passos. <span class="inv">Um caminho.</span></h2>
+    <p>Do momento em que você define quem quer alcançar até a oportunidade com próximo passo no funil, sem copiar e colar entre ferramentas.</p>
+  </div>
+  <div class="steps">
+    <div class="step rv"><div class="txt"><div class="num">1</div><h3>Você diz quem é o cliente ideal</h3><p>Três perguntas: o nicho, o porte e o sinal de uma boa oportunidade. As respostas ficam salvas na conta e orientam as próximas listas.</p></div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>cliente foco</span></div><img src="img/tela-cliente-foco.jpg" alt="Tela de cliente foco do HCP" width="1200" height="360"></div></div>
+    <div class="step rv"><div class="txt"><div class="num">2</div><h3>O HCP monta a lista com critério</h3><p>Nicho, estado, cidade, porte, situação cadastral e presença digital. Você filtra antes de ligar, em vez de descobrir na ligação que a empresa já fechou.</p></div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>critérios da lista</span></div><img src="img/tela-criterios.jpg" alt="Tela de critérios da lista do HCP" width="1000" height="792"></div></div>
+    <div class="step rv"><div class="txt"><div class="num">3</div><h3>Você escolhe as melhores</h3><p>Marca as empresas que valem a ligação, salva a lista com nome e exporta em Excel ou CSV se precisar levar pra outro lugar.</p></div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>resultados</span></div><img src="img/tela-lista.jpg" alt="Lista de resultados com exportação" width="1200" height="791"></div></div>
+    <div class="step rv"><div class="txt"><div class="num">4</div><h3>Vira oportunidade no funil</h3><p>A empresa escolhida vira card no seu CRM, com as etapas que você define, valor da oportunidade e próximo passo. Privado ou da equipe.</p></div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>crm · comercial</span></div><img src="img/tela-crm.jpg" alt="CRM do HCP com etapas e cards" width="1200" height="486"></div></div>
+  </div>
+  <div class="note">Telas reais do protótipo · dados de demonstração</div>
+</div></section>
+
+<section id="transparencia"><div class="wrap">
+  <div class="sec-h rv">
+    <div class="kick">Transparência</div>
+    <h2 style="margin-top:14px">A gente prefere <span class="inv">provar a prometer.</span></h2>
+    <p>O HCP está em construção, e a gente mostra exatamente onde. Sem número inventado de cliente ou de resultado.</p>
+  </div>
+  <div class="split">
+    <div class="col now rv"><div class="kick">Funciona hoje</div><ul>
+      <li><span class="dot"></span>Lista pelos seus critérios</li>
+      <li><span class="dot"></span>Cliente foco salvo na conta</li>
+      <li><span class="dot"></span>Favoritos e histórico</li>
+      <li><span class="dot"></span>CRM com etapas próprias</li>
+      <li><span class="dot"></span>Exportar em Excel e CSV</li>
+      <li><span class="dot"></span>Contas separadas por empresa</li></ul></div>
+    <div class="col wip rv"><div class="kick">Em construção</div><ul>
+      <li><span class="dot"></span>Dados reais em escala</li>
+      <li><span class="dot"></span>Nilo, o agente comercial</li>
+      <li><span class="dot"></span>Análise e ações comerciais</li>
+      <li><span class="dot"></span>Planos e cobrança</li>
+      <li><span class="dot"></span>Aplicativo Android</li></ul></div>
+  </div>
+</div></section>
+
+<section id="piloto"><div class="wrap">
+  <div class="pilot rv">
+    <div class="kick" style="position:relative">Piloto assistido</div>
+    <h2 style="margin-top:14px;position:relative">Teste na sua operação. <span class="inv">Sem cobrança.</span></h2>
+    <p class="muted" style="max-width:620px;margin:18px auto 0;font-size:18px;position:relative">Estamos abrindo o piloto pra poucas equipes que prospectam outras empresas. Você usa o HCP no seu dia a dia e fala direto com quem constrói.</p>
+    <div class="perks">
+      <div class="perk"><b>01</b><div><strong>Sem cobrança</strong><p>Durante o piloto você não paga nada.</p></div></div>
+      <div class="perk"><b>02</b><div><strong>Acompanhamento direto</strong><p>Conversa com a equipe do HCP, não com um robô de suporte.</p></div></div>
+      <div class="perk"><b>03</b><div><strong>Você influencia o produto</strong><p>O que sua equipe precisa entra na conversa sobre o que vem depois.</p></div></div>
+      <div class="perk"><b>04</b><div><strong>Pra quem é</strong><p>Equipes comerciais B2B: agências, empresas de software, distribuidoras, representações.</p></div></div>
+    </div>
+    <div class="cta" style="position:relative"><a class="btn bp wa" href="#" data-msg="Olá! Vi o HCP no Instagram e quero participar do piloto.">Quero participar · chama no WhatsApp</a></div>
+  </div>
+</div></section>
+
+<section id="duvidas"><div class="wrap">
+  <div class="sec-h rv"><div class="kick">Dúvidas</div><h2 style="margin-top:14px">Perguntas diretas, <span class="inv">respostas diretas.</span></h2></div>
+  <div class="rv">
+    <details><summary>O piloto é pago?</summary><p>Não. Durante o piloto o HCP é sem cobrança. A parte de planos e cobrança ainda está em construção, e a gente conversa sobre isso com transparência antes de qualquer mudança.</p></details>
+    <details><summary>As listas já usam dados reais de empresas?</summary><p>Ainda não. Hoje o protótipo gera listas com dados de demonstração pra mostrar o fluxo funcionando. Dados reais em escala estão em construção, e é exatamente o tipo de coisa que o piloto ajuda a priorizar.</p></details>
+    <details><summary>Pra que tipo de empresa o HCP serve?</summary><p>Pra equipes que vendem pra outras empresas (B2B) e prospectam ativamente: agências de marketing, empresas de software, distribuidoras, representações comerciais, consultorias.</p></details>
+    <details><summary>Eu preciso trocar meu CRM?</summary><p>Não necessariamente. O HCP tem CRM próprio com etapas que você define, mas também exporta as listas em Excel ou CSV se você preferir continuar com a ferramenta que já usa.</p></details>
+    <details><summary>Como eu entro no piloto?</summary><p>Chama no WhatsApp ou no direct do Instagram. A gente entende como sua equipe prospecta hoje e vê se o piloto faz sentido pra vocês.</p></details>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <img src="img/h.png" alt="" style="width:90px;margin:0 auto 26px">
+  <h2>Menos tempo entre ferramentas.<br><span class="inv">Mais tempo vendendo.</span></h2>
+  <div class="cta"><a class="btn bp wa" href="#" data-msg="Olá! Vi o HCP no Instagram e quero participar do piloto.">Quero participar do piloto</a>
+    <a class="btn bs" href="https://www.instagram.com/hubclassprospect/" target="_blank" rel="noopener">@hubclassprospect</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© HCP · Hub Class Prospect · Toledo, PR</span>
+  <span class="mono">Telas reais do protótipo com dados de demonstração</span>
+</div></footer>
+
+<div class="float"><a class="btn bp wa" href="#" data-msg="Olá! Vi o HCP no Instagram e quero participar do piloto.">Quero participar do piloto</a></div>
+
+<script>
+var PHONE='5545998590128';
+document.querySelectorAll('.wa').forEach(function(a){a.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(a.dataset.msg||'Olá! Vi o HCP no Instagram.');a.target='_blank';a.rel='noopener'});
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+var fl=document.querySelector('.float'),hc=document.querySelector('.hero .cta');function chk(){var r=hc.getBoundingClientRect();fl.classList.toggle('on',r.bottom<0)}window.addEventListener('scroll',chk,{passive:true});chk();
+</script>
+</body>
+</html>
